@@ -1,0 +1,36 @@
+{
+  "name": "markdown-plus",
+  "version": "1.0.0",
+  "description": "Markdown Plus. Based on Markdown-it(https://github.com/markdown-it/markdown-it)",
+  "main": "out/index.js",
+  "directories": {
+    "doc": "docs",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "node test/out/index.js",
+    "build": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/maxswjeon/markdown-plus.git"
+  },
+  "keywords": [
+    "markdown",
+    "parser"
+  ],
+  "author": "Jeon Sangwan <maxswjeon@naver.com>",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/maxswjeon/markdown-plus/issues"
+  },
+  "homepage": "https://github.com/maxswjeon/markdown-plus#readme",
+  "dependencies": {
+    "markdown-it": "^10.0.0",
+    "typescript": "^3.8.3"
+  },
+  "devDependencies": {
+    "@types/markdown-it": "0.0.9",
+    "@types/node": "^13.7.7"
+  }
+}
