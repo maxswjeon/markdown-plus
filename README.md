@@ -7,7 +7,7 @@ Markdown Parser by Codingbear (Jeon Sangwan <maxswjeon@naver.com>)
 const parser = new MarkdownParser();
 ```
 
-### #Using Plugins
+#### Using Plugins
 ```typescript
 const parser = new MarkdownParser()
                    .use(new PluginParser());
