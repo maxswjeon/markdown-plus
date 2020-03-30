@@ -1,7 +1,9 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : {"default": mod};
-};
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+
 Object.defineProperty(exports, "__esModule", {value: true});
-var Markdown_1 = __importDefault(require("./Markdown"));
-exports.Markdown = Markdown_1.default;
+__export(require("./MarkdownPlus"));
+__export(require("./MarkdownPlugin"));

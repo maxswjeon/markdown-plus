@@ -24,6 +24,16 @@ These Markdown specs are handled by `markdown-it`.
 
 These Extended Markdown Basics are also known as GFM, and it is handled by `markdown-it`.
 
+## Official Markdown-it Plugins
+- [ ] Official Markdown-it Plugins
+    - [ ] Emoji
+    - [ ] Superscript
+    - [ ] Subscript
+    - [ ] Footnotes
+    - [ ] Abbreviation
+    - [ ] Mark
+    - [ ] Linkify
+    
 ## MUME Specific Markdown Specs
 ### Markdown Basics
 - [ ] Mume Specific Markdown Basics
@@ -33,14 +43,8 @@ These Extended Markdown Basics are also known as GFM, and it is handled by `mark
     - [ ] Code block highlighting rows
     - [ ] Task Lists
     - [ ] Table colspan with `>`, rowspan with `^`
-    - [ ] Emoji
-    - [ ] Font-Awesome
-    - [ ] Superscript
-    - [ ] Subscript
-    - [ ] Footnotes
-    - [ ] Abbreviation
-    - [ ] Mark
     - [ ] CriticMarkup
+    - [ ] Font-Awesome
 
 Tasks Lists can be implemented with markdown-it plugin [markdown-it-task-lists](https://github.com/revin/markdown-it-task-lists)
 
@@ -62,3 +66,9 @@ since [mermaid](https://github.com/knsv/mermaid) supports more powerful sequence
 
 ### Others
 - [ ] Circuit Schematics with TikZ
+
+# Test Area
+```javascript
+//Code Block Here
+``` 
+Text after code block

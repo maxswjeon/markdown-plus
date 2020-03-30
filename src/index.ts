@@ -1,5 +1,2 @@
-import Markdown from "./Markdown";
-
-export {
-    Markdown
-}
+export * from "./MarkdownPlus";
+export * from "./MarkdownPlugin";
