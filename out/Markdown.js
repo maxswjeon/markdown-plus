@@ -26,6 +26,23 @@ var Markdown = /** @class */ (function () {
         var md = new Markdown(src);
         return md;
     };
+    Markdown.prototype.getLine = function (index) {
+        if (index >= this.markers.line_begin.length) {
+            return null;
+        }
+        return this.src.slice(this.markers.line_begin[index], this.markers.line_end[index]);
+    };
+    Markdown.prototype.skipEmptyLines = function (index) {
+        if (index >= this.markers.line_begin.length) {
+            return -1;
+        }
+        for (; index < this.markers.count; index++) {
+            if (this.markers.line_begin[index] + this.markers.offset[index] < this.markers.line_end[index]) {
+                break;
+            }
+        }
+        return index;
+    };
     Markdown.prototype.normalize = function (src) {
         return src.replace(/\\n?|\n/g, '\n');
     };
@@ -65,23 +82,6 @@ var Markdown = /** @class */ (function () {
             }
         }
         this.markers.count = this.markers.line_begin.length;
-    };
-    Markdown.prototype.getLine = function (index) {
-        if (index >= this.markers.line_begin.length) {
-            return null;
-        }
-        return this.src.slice(this.markers.line_begin[index], this.markers.line_end[index]);
-    };
-    Markdown.prototype.skipEmptyLines = function (index) {
-        if (index >= this.markers.line_begin.length) {
-            return -1;
-        }
-        for (; index < this.markers.count; index++) {
-            if (this.markers.line_begin[index] + this.markers.offset[index] < this.markers.line_end[index]) {
-                break;
-            }
-        }
-        return index;
     };
     return Markdown;
 }());

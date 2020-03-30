@@ -5,5 +5,6 @@ function __export(m) {
 }
 
 Object.defineProperty(exports, "__esModule", {value: true});
+__export(require("./Markdown"));
 __export(require("./MarkdownPlus"));
 __export(require("./MarkdownPlugin"));

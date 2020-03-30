@@ -8,7 +8,6 @@ var Markers = /** @class */ (function () {
         this.offset_expanded = [];
         this.count = 0;
     }
-
     return Markers;
 }());
 exports.default = Markers;
