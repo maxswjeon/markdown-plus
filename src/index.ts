@@ -1,3 +1,5 @@
 export * from "./Markdown";
 export * from "./MarkdownParser";
-export * from "./Plugins/MarkdownPlugin";
+export * from "./MarkdownRenderer";
+export * from "./MarkdownPlugin";
+export * from "./MarkdownRule";

@@ -1,5 +1,4 @@
 import fs from 'fs';
-import Markers from "./Markers";
 
 export default class Markdown {
 
@@ -18,13 +17,11 @@ export default class Markdown {
     static fromFile(path: fs.PathLike, encoding: string = 'utf-8'): Markdown {
         const src = fs.readFileSync(path, encoding);
 
-        const md = new Markdown(src);
-        return md;
+        return new Markdown(src);
     }
 
     static fromString(src: string): Markdown {
-        const md = new Markdown(src);
-        return md;
+        return new Markdown(src);
     }
 
     getLine(index: number): string | null {
@@ -96,6 +93,23 @@ export default class Markdown {
             }
         }
         this.markers.count = this.markers.line_begin.length;
+    }
+
+}
+
+class Markers {
+    public line_begin: Array<number>;
+    public line_end: Array<number>;
+    public offset: Array<number>;
+    public offset_expanded: Array<number>;
+    public count: number;
+
+    constructor() {
+        this.line_begin = new Array<number>();
+        this.line_end = new Array<number>();
+        this.offset = new Array<number>();
+        this.offset_expanded = new Array<number>();
+        this.count = 0;
     }
 
 }
